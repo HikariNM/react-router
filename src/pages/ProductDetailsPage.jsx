@@ -13,7 +13,7 @@ function ProductDetailsPage() {
         const apiUrl = `https://fakestoreapi.com/products/${id}`
 
         const checkId = parseInt(id);
-        if (checkId < 1) {
+        if (checkId < 1 || checkId > 20) {
             navigate('/products');
             return;
         }
