@@ -1,7 +1,9 @@
 function AboutUs() {
 
     return <>
-        About Us
+        <div className="container text-center">
+            <p>Questa è la pagina <span className="fst-italic">About Us</span></p>
+        </div>
     </>
 }
 

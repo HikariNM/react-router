@@ -8,6 +8,7 @@ function Products() {
     // State che contiene la lista dei prodotti
     const [products, setProducts] = useState([]);
 
+
     function getData() {
         const apiUrl = 'https://fakestoreapi.com/products'
 
@@ -20,6 +21,7 @@ function Products() {
     }
 
     useEffect(getData, [])
+
     return <>
         <div className='container my-4'>
             <div className='row g-4 container justify-content-center'>
