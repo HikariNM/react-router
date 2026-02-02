@@ -3,7 +3,7 @@ Creiamo il frontend del nostro mini e-commerce e le sue pagine principali! <br/>
 Useremo Fake Store API come backend fittizio per simulare i dati dei prodotti.
 
 *PARTE 1*<br/>
-Installiamo React Router DOM: npm i react-router-dom<br/>
+Installiamo React Router DOM: npm i react-router-dom <br/>
 Creiamo almeno 3 pagine principali:<br/>
 - Homepage (con un messaggio di benvenuto o immagine promozionale)
 - Chi siamo
