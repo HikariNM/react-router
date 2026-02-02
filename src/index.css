@@ -2,3 +2,14 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+
+}

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AboutUs from './pages/AboutUs'
 import Products from './pages/Products'
-import NavBar from './components/Navbar'
+import ProductDetailsPage from './pages/ProductDetailsPage'
 import DefaultLayout from './layout/DefaultLayout'
 import './App.css'
 
@@ -15,6 +15,7 @@ function App() {
         <Route path='/' Component={HomePage} />
         <Route path='/aboutus' Component={AboutUs} />
         <Route path='/products' Component={Products} />
+        <Route path='/products/:id' Component={ProductDetailsPage} />
       </Route>
     </Routes>
   </BrowserRouter>

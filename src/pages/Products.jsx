@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from "axios"
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 
 function Products() {
 
@@ -27,7 +28,7 @@ function Products() {
                     <div key={product.id} className="card bg-dark text-white col-12 col-md-3" >
                         <img src={product.image} className="card-img-top card-img-fixed" alt={product.title} />
                         <div className="card-body">
-                            <h3 className="card-title">{product.title}</h3>
+                            <Link to={`/products/${product.id}`}><h3 className="card-title">{product.title}</h3> </Link>
                             <p className="card-text">{product.price}€</p>
                             <p className="card-text">{product.category}</p>
                         </div>
