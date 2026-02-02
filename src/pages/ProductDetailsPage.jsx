@@ -12,6 +12,12 @@ function ProductDetailsPage() {
     function getData() {
         const apiUrl = `https://fakestoreapi.com/products/${id}`
 
+        const checkId = parseInt(id);
+        if (checkId < 1) {
+            navigate('/products');
+            return;
+        }
+
         axios.get(apiUrl).then(res => {
             console.log('Dati arrivati:', res.data)
             setProduct(res.data)
@@ -46,6 +52,8 @@ function ProductDetailsPage() {
                 <div className="col d-flex justify-content-between">
                     <Link className="btn btn-warning" to={`/products/${parseInt(id) - 1}`}>Previous Page</Link>
                     <Link className="btn btn-warning" to={`/products/${parseInt(id) + 1}`}>Next Page</Link>
+                    {/* <button className="btn btn-warning" onClick={() => navigate(`/products/${parseInt(id) - 1}`)} disabled={parseInt(id) <= 1}>Previous Page</button> */}
+                    {/* <button className="btn btn-warning" onClick={() => navigate(`/products/${parseInt(id) + 1}`)}>Next Page</button> */}
                 </div>
             </div>
         </div >
