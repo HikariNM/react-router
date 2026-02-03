@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function NavBar() {
+function NavBar({ onSearch }) {
+    // Receives onSearch as a prop
+
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -22,7 +25,7 @@ function NavBar() {
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <input className="form-control me-2" type="search" onChange={(e) => onSearch(e.target.value)} placeholder="Search" aria-label="Search" />
                     </form>
                 </div>
             </div>

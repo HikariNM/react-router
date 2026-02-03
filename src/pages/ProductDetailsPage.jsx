@@ -19,10 +19,10 @@ function ProductDetailsPage() {
         }
 
         axios.get(apiUrl).then(res => {
-            console.log('Dati arrivati:', res.data)
+            console.log('Incoming data:', res.data)
             setProduct(res.data)
         }).catch(error => {
-            console.log('Si è rotto qualcosa...', error.message);
+            console.log('Something is broken...', error.message);
             navigate('/products');
         })
     };
@@ -30,7 +30,7 @@ function ProductDetailsPage() {
     useEffect(getData, [id]);
 
     if (product == null) {
-        return <div>Caricamento in corso</div>
+        return <div>Loading...</div>
     }
     else {
         return <div className='container my-4'>

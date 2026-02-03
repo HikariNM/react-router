@@ -9,12 +9,16 @@ import './App.css'
 
 function App() {
 
+  const [searchTerm, setSearchTerm] = useState('');
+
   return <BrowserRouter>
     <Routes>
-      <Route Component={DefaultLayout}>
+      {/* Passes setSearchTerm to DefaultLayout as the "onSearch" prop */}
+      <Route element={<DefaultLayout onSearch={setSearchTerm} />}>
         <Route path='/' Component={HomePage} />
         <Route path='/aboutus' Component={AboutUs} />
-        <Route path='/products' Component={Products} />
+        {/* Passes searchTerm to Products as a prop */}
+        <Route path='/products' element={<Products searchTerm={searchTerm} />} />
         <Route path='/products/:id' Component={ProductDetailsPage} />
       </Route>
     </Routes>
