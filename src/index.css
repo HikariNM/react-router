@@ -1,15 +1,25 @@
-* {
+*:not(nav *):not(footer *) {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
 
-a:link {
-  text-decoration: none;
+li a,
+a:link,
+i {
   color: white;
+  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: white;
+footer a,
+footer a:link {
+  color: black;
+}
 
+.product-link:hover {
+  text-decoration: underline;
+}
+
+.card-img-fixed {
+  height: 300px;
+  object-fit: contain;
 }
